@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workingSetManager>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1476713901832_0" label="paytmMVN" name="paytmMVN">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/paytmMVN" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/paytm-service" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/paytm-data" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/paytm-web" type="4"/>
+</workingSet>
+</workingSetManager>
