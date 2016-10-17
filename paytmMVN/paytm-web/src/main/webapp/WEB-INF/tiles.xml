@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+        "http://tilles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+	<definition name="baseTemplate" id="baseTemplate"
+		template="/WEB-INF/layout/baselayout.jsp">
+		<!-- <put-attribute name="title" value="${title}" /> -->
+		<put-attribute name="title" value="prestigepoint" />
+		<put-attribute name="header" value="/WEB-INF/layout/header.jsp" />
+		<put-attribute name="body" value="${body}" />
+		<put-attribute name="footer" value="/WEB-INF/layout/footer.jsp" />
+	</definition>
+
+	<!-- <definition name="baseTemplate" id="baseTemplate" template="/WEB-INF/layout/mainlayout.jsp"> 
+		<put-attribute name="title" value="${title}" /> <put-attribute name="title" 
+		value="prestigepoint" /> <put-attribute name="header" value="/WEB-INF/layout/header.jsp" 
+		/> <put-attribute name="body" value="${body}" /> <put-attribute name="footer" 
+		value="/WEB-INF/layout/footer.jsp" /> </definition> -->
+
+	<!-- Mapping for login Page -->
+
+	<definition name="login" id="login" extends="baseTemplate">
+		<put-attribute name="body" value="/WEB-INF/jsp/login.jsp" />
+		<put-attribute name="title" type="string" value="login Page" />
+	</definition>
+
+	<!-- Mapping for welcom Page -->
+
+	<definition name="welcome" id="welcome" extends="baseTemplate">
+		<put-attribute name="body" value="/WEB-INF/jsp/welcome.jsp" />
+		<put-attribute name="title" type="string" value="welcome Page" />
+	</definition>
+
+	<!-- Mapping for recharge Page -->
+
+	<definition name="recharge" id="recharge" extends="baseTemplate">
+		<put-attribute name="body" value="/WEB-INF/jsp/recharge.jsp" />
+		<put-attribute name="title" type="string" value="recharge Page" />
+	</definition>
+
+
+	<!-- Mapping for register Page -->
+
+	<definition name="register" id="register" extends="baseTemplate">
+		<put-attribute name="body" value="/WEB-INF/jsp/register.jsp" />
+		<put-attribute name="title" type="string" value="register Page" />
+	</definition>
+	
+	<!-- Mapping for Library mangement Page -->
+
+	<definition name="LibraryManagment" id="LibraryManagment" extends="baseTemplate">
+		<put-attribute name="body" value="/WEB-INF/jsp/LibraryManagment.jsp" />
+		<put-attribute name="title" type="string" value="Library Page" />
+	</definition>
+	
+	
+	
+	
+</tiles-definitions>
