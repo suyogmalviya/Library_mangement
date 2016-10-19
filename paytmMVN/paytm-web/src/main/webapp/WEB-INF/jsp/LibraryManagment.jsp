@@ -20,13 +20,15 @@
         <div id="menu">
             <ul>                                                                       
             <li class="selected"><a href="#">home</a></li>
-            <li><a href="#">about</a></li>
-            <li><a href="#">Administrator</a></li>
-            <li><a href="#">User/Student</a></li>
-            <li><a href="#">Library</a></li>
-            <li><a href="#">projects</a></li>
-            <li><a href="#">Quiz</a></li>
-            <li><a href="#">get in touch</a></li>                                                          
+            <li><a href="about.do">about</a></li>
+            <li><a href="Adminlogin.do">Administrator</a></li>
+            <li><a href="UserLogin.do">User/Student</a></li>
+            <li><a href="Library">Library</a></li>
+            <li><a href="projects">projects</a></li>
+            <li><a href="Quiz.do">Quiz</a></li>
+            <li><a href="downloads.do">Downloads</a></li>
+            <li><a href="viewProfile.do">Profile</a></li>
+            <!-- <li><a href="#">get in touch</a></li> -->                                                          
             </ul>
         </div> 
     

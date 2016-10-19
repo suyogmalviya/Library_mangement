@@ -19,11 +19,21 @@ public class AdminLoginController {
 	private AdminLoginService adminLoginService;
 
 	
-	@RequestMapping(value = "/Adminlogin_l", method = RequestMethod.GET)
+@RequestMapping(value = "/Adminlogin", method = RequestMethod.GET)
 	public String ShowAdminLogin(Map<String, Object> map) {
 
 		map.put("AdminLogin", new AdminLogin());
 		return "AdminLogin";
 	}
+	
+	/*@RequestMapping(value="/Adminlogin",method=RequestMethod.GET)
+	 
+	   public String AdminLoginDisplay() {
+		
+		System.out.println("inside admin login");
+		return "AdminLogin";
+	   }*/
+	
+	
 
 }

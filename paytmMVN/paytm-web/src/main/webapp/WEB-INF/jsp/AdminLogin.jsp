@@ -13,7 +13,7 @@
 <body>
 <h1> Administrator login page</h1><br>
 <h3 style="color: red;">${invalid}</h3>
-<form:form method="POST" action="saveUser.do" modelAttribute="UserLogin" >
+<form:form method="POST" action="Adminsave.do" modelAttribute="AdminLogin" >
         <table width="100%" border="0">
           <tr>
             <td>
