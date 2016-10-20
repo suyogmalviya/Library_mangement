@@ -1,35 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Bootstrap Snippet: Login Form</title>
+    
+    
+    
+    <link rel='stylesheet prefetch' href='http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css'>
 
-<head>
+        <link rel="stylesheet" href="css/style_admin_login.css">
 
-  <meta charset="UTF-8">
+    
+    
+    
+    
+  </head>
 
-  <title>CodePen - Login </title>
+  <body>
 
-  <link rel="stylesheet" href="css/reset.css">
-
-    <link rel="stylesheet" href="css/style_login.css" media="screen" type="text/css" />
-
-</head>
-
-<body>
-
-  <div class="wrap">
-		<div class="avatar">
-      <img src="http://cdn.ialireza.me/avatar.png">
-		</div>
-		<input type="text" placeholder="username" required>
-		<div class="bar">
-			<i></i>
-		</div>
-		<input type="password" placeholder="password" required>
-		<a href="" class="forgot_link">forgot ?</a>
-		<button>Sign in</button>
-	</div>
-
-  <script src="js/login_js.js"></script>
-
-</body>
-
+      <div class="wrapper">
+    <form class="form-signin">       
+      <h2 class="form-signin-heading">Please login</h2>
+      email id<input type="text" class="form-control" name="username" placeholder="Email Address" required="" autofocus="" />
+     password <input type="password" class="form-control" name="password" placeholder="Password" required=""/>      
+      <label class="checkbox">
+        <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Remember me
+      </label>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>   
+    </form>
+  </div>
+    
+    
+    
+    
+  </body>
 </html>
