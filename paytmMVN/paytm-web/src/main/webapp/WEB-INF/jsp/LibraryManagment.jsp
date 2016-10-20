@@ -21,6 +21,7 @@
             <ul>                                                                       
             <li class="selected"><a href="#">home</a></li>
             <li><a href="about.do">about</a></li>
+            <li><a href="Test.do">Test</a></li>
             <li><a href="Adminlogin.do">Administrator</a></li>
             <li><a href="UserLogin.do">User/Student</a></li>
             <li><a href="Library">Library</a></li>
@@ -32,8 +33,11 @@
             </ul>
         </div> 
     
+    
+    
     <div class="tab_bg">
     
+    <br><a href="india.do">india</a>
             
         <div class="tab_left">
        <img src="images/big_icon.png" alt="" title="" border="0" class="big_icon" />       

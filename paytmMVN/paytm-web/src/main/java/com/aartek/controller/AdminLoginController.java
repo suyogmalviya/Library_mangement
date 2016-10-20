@@ -18,22 +18,29 @@ public class AdminLoginController {
 	@Autowired
 	private AdminLoginService adminLoginService;
 
-	
-@RequestMapping(value = "/Adminlogin", method = RequestMethod.GET)
-	public String ShowAdminLogin(Map<String, Object> map) {
+	/*
+	 * @RequestMapping(value = "/Adminlogin", method = RequestMethod.POST)
+	 * public String ShowAdminLogin(Map<String, Object> map) {
+	 * 
+	 * map.put("AdminLogin", new AdminLogin()); return "AdminLogin"; }
+	 */
 
-		map.put("AdminLogin", new AdminLogin());
+	/* @RequestMapping(value="/Adminlogin",method=RequestMethod.GET) */
+	@RequestMapping(value = "/Adminlogin", method = { RequestMethod.GET, RequestMethod.POST })
+
+	public String AdminLoginDisplay() {
+		System.out.println("inside admin login");
+		System.out.println("Test inside");
 		return "AdminLogin";
 	}
-	
-	/*@RequestMapping(value="/Adminlogin",method=RequestMethod.GET)
-	 
-	   public String AdminLoginDisplay() {
-		
-		System.out.println("inside admin login");
-		return "AdminLogin";
-	   }*/
-	
-	
+
+	@RequestMapping(value = "/india", method = RequestMethod.GET)
+
+	public String indiaDisplay() {
+
+		System.out.println("inside india");
+		return "india";
+
+	}
 
 }
