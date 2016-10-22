@@ -13,20 +13,20 @@
 <body>
 <h1>login page</h1><br>
 <h3 style="color: red;">${invalid}</h3>
-<form:form method="POST" action="saveUser.do" modelAttribute="UserLogin" >
+<%-- <form:form method="POST" action="saveUser.do" modelAttribute="UserLogin" > --%>
         <table width="100%" border="0">
           <tr>
             <td>
                   <p>
                     User Name
-                  </p> <form:input path="emailId" id="emailId" /> 
+                  </p> <%-- <form:input path="emailId" id="emailId" />  --%>
               </td>
           </tr>
           <tr>
             <td>
                   <p>
                     Password
-                  </p> <form:password path="password" id="password" /> 
+                  </p><%--  <form:password path="password" id="password" />  --%>
               </td>
           </tr>
             
@@ -34,7 +34,7 @@
             <td colspan="2"><input type="submit" value="Submit" /></td>
           </tr>
         </table>
-   <  </form:form> 
+    <%--   </form:form> --%>
       
 </body>
 </html>

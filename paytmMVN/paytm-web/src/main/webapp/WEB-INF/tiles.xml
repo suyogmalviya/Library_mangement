@@ -54,7 +54,21 @@
 		<put-attribute name="title" type="string" value="Library Page" />
 	</definition>
 	
+	<!-- Mapping for Admin Login library Page -->
+
+
+<definition name="AdminLogin" id="Adminlogin" extends="baseTemplate">
+		<put-attribute name="body" value="/WEB-INF/jsp/AdminLogin.jsp" />
+		<put-attribute name="title" type="string" value="Admin login Page" />
+	</definition>
+
 	
+		<!-- Mapping for india Page -->
+
+	 <definition name="india" id="india" extends="baseTemplate">
+		<put-attribute name="body" value="/WEB-INF/jsp/india.jsp" />
+		<put-attribute name="title" type="string" value="india Page" />
+	</definition> 
 	
 	
 </tiles-definitions>

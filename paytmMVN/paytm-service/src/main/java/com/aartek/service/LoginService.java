@@ -8,10 +8,6 @@ import org.springframework.stereotype.Service;
 import com.aartek.model.UserLogin;
 import com.aartek.repository.LoginRepository;
 
-
-
-
-
 @Service
 public class LoginService {
 	
