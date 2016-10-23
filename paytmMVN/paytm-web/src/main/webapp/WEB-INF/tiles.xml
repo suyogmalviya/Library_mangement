@@ -88,4 +88,14 @@
 	</definition> 
 	
 	
+		<!-- Mapping for Create new staff Page -->
+	
+	 <definition name="createnewstaff" id="createnewstaff" extends="baseTemplate">
+		<put-attribute name="body" value="/WEB-INF/jsp/createnewstaff.jsp" />
+		<put-attribute name="title" type="string" value="Welcome admin Page" />
+	</definition> 
+	
+	
+	
+	
 </tiles-definitions>
