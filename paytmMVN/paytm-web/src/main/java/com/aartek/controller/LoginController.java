@@ -48,7 +48,7 @@ public class LoginController {
 
 	@RequestMapping(value = "/saveUser", method = RequestMethod.POST)
 	public String saveUser(@ModelAttribute("UserLogin") UserLogin userlogin, ModelMap model) {
-		model.addAttribute("invalid", "Invalide User E-mail and Password");// for validator
+		model.addAttribute("invalid", "Invalid User E-mail and Password");// for validator
 		boolean loginStatus = loginService.checkLogin(userlogin);
 		if (loginStatus == false) {
 

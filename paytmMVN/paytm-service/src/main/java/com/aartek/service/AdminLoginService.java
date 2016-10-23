@@ -18,14 +18,15 @@ public class AdminLoginService {
 	public boolean checkAdminLogin(AdminLogin adminLogin) {
 		System.out.println("inside service Check admin login");
 		System.out.println("Admin name" + adminLogin.getAdminname() + " " + adminLogin.getAdminpass());
-		
-		List<Object>adloginstatus=adminRepository.AdminloginDBCheck(adminLogin);
-				
-		return false;
+
+		List<Object> adloginstatus = adminRepository.AdminloginDBCheck(adminLogin);
+		if (adloginstatus.size() == 0) {
+			return false;
+		} else {
+			System.out.println(" list is not empty");
+
+			return true;
+		}
+
 	}
-
-	
-	
 }
-
-

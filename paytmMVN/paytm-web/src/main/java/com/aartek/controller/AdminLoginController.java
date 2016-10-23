@@ -42,7 +42,7 @@ public class AdminLoginController {
 		if (AdminloginStatus == false) {
 			return "Test";
 		} else {
-			return "welcome";
+			return "WelcomeAdmin";
 		}
 	}
 

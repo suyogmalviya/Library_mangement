@@ -11,7 +11,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>login page</h1><br>
+<h1>Test  page</h1><br>
 <h3 style="color: red;">${invalid}</h3>
 <%-- <form:form method="POST" action="saveUser.do" modelAttribute="UserLogin" > --%>
         <table width="100%" border="0">

@@ -29,10 +29,6 @@ public class LoginService {
 		System.out.println("service list save");
 		
 		return true;	
-		
+	
 	}
-	
-	
-	
-
 }

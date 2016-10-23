@@ -71,4 +71,21 @@
 	</definition> 
 	
 	
+		<!-- Mapping for Test Page -->
+	
+	 <definition name="Test" id="Test" extends="baseTemplate">
+		<put-attribute name="body" value="/WEB-INF/jsp/Test.jsp" />
+		<put-attribute name="title" type="string" value="Test Page" />
+	</definition> 
+	
+	
+	
+	<!-- Mapping for Welcome Admin Page -->
+	
+	 <definition name="WelcomeAdmin" id="WelcomeAdmin" extends="baseTemplate">
+		<put-attribute name="body" value="/WEB-INF/jsp/WelcomeAdmin.jsp" />
+		<put-attribute name="title" type="string" value="Welcome admin Page" />
+	</definition> 
+	
+	
 </tiles-definitions>
