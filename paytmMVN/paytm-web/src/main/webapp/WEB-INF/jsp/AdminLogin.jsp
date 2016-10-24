@@ -20,10 +20,10 @@
     <form class="form-signin">       
       <h2 class="form-signin-heading">Please login</h2>
       
-     <form:form method="POST" action="saveAdminUser.do" modelAttribute="AdminLogin" autocomplete="off">
+     <form method="POST" action="saveAdminUser.do" modelAttribute="AdminLogin" autocomplete="off">
      
       email id<input type="text" class="form-control" name="Adminname" placeholder="Email Address" required="" autofocus="" />
-    </p> <form:input path="emailId" id="emailId" />
+    <!-- </p> <form:input path="emailId" id="emailId" /> -->
      password <input type="password" class="form-control" name="Adminpass" placeholder="Password" required=""/>      
       <label class="checkbox">
         <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Remember me
