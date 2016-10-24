@@ -11,6 +11,8 @@ public class AdminLogin {
 	private String Adminname;
 	@Column
 	private String Adminpass;
+	
+	
 	public String getAdminname() {
 		return Adminname;
 	}
