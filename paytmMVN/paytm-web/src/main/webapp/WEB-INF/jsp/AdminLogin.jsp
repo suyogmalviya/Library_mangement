@@ -36,5 +36,25 @@
         </table>
      </form:form> 
       
+<<<<<<< HEAD
 </body>
 </html>
+=======
+     <form method="POST" action="saveAdminUser.do" modelAttribute="AdminLogin" autocomplete="off">
+     
+      email id<input type="text" class="form-control" name="Adminname" placeholder="Email Address" required="" autofocus="" />
+    <!-- </p> <form:input path="emailId" id="emailId" /> -->
+     password <input type="password" class="form-control" name="Adminpass" placeholder="Password" required=""/>      
+      <label class="checkbox">
+        <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Remember me
+      </label>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>   
+    </form>
+  </div>
+    
+    
+    
+   </form>
+  </body>
+</html>
+>>>>>>> da78a738a032127abf9df2a6a74526371a98eeb8
