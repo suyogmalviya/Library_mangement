@@ -36,11 +36,10 @@
         </table>
      </form:form> 
       
-<<<<<<< HEAD
+
 </body>
 </html>
-=======
-     <form method="POST" action="saveAdminUser.do" modelAttribute="AdminLogin" autocomplete="off">
+    <%--  <form method="POST" action="saveAdminUser.do" modelAttribute="AdminLogin" autocomplete="off">
      
       email id<input type="text" class="form-control" name="Adminname" placeholder="Email Address" required="" autofocus="" />
     <!-- </p> <form:input path="emailId" id="emailId" /> -->
@@ -57,4 +56,4 @@
    </form>
   </body>
 </html>
->>>>>>> da78a738a032127abf9df2a6a74526371a98eeb8
+ --%>

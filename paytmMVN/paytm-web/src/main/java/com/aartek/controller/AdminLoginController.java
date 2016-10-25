@@ -25,10 +25,7 @@ public class AdminLoginController {
 	public String AdminLoginDisplay(Map<String, Object> map) {
 		System.out.println("inside admin login display");
 		map.put("AdminLogin", new AdminLogin());
-		/*
-		 * public String showLogin(Map<String, Object> map) {
-		 * map.put("UserLogin", new UserLogin());
-		 */
+	
 		return "AdminLogin";
 
 	}

@@ -13,14 +13,14 @@
 <body>
 <h1>Create New Staff  page</h1><br>
 <h3 style="color: red;">${invalid}</h3>
-<%-- <form:form method="POST" action="saveUser.do" modelAttribute="UserLogin" > --%>
+<form:form method="POST" action="saveNewStaff.do" modelAttribute="Createnewstaff" > 
         <table width="100%" border="0">
           
           <tr>
             <td>
                   <p>
                     Employee Id
-                  <%-- </p> <form:input path="employee_id" id="employee_id" />  --%>
+                 </p> <form:input path="employee_id" id="employee_id" /> 
               </td>
           </tr>
           
@@ -30,7 +30,7 @@
             <td>
                   <p>
                     Staff Name
-                  <%-- </p> <form:input path="staffname" id="staffname" />  --%>
+                   </p> <form:input path="staffname" id="staffname" /> 
               </td>
           </tr>
           
@@ -38,7 +38,7 @@
             <td>
                   <p>
                     emailid 
-               <%--    </p> <form:input path="emailid" id="emailid" />  --%>
+                   </p> <form:input path="emailid" id="emailid" /> 
               </td>
           </tr>
           
@@ -46,7 +46,7 @@
             <td>
                   <p>
                     Mobile No 
-               <%--    </p> <form:input path="mobno" id="mobno" /> --%> 
+               </p> <form:input path="mobno" id="mobno" />  
               </td>
           </tr>
           
@@ -54,7 +54,7 @@
             <td>
                   <p>
                     Department 
-                 <%--  </p> <form:input path="department" id="department" />  --%>
+                   </p> <form:input path="department" id="department" /> 
               </td>
           </tr>
           
@@ -62,7 +62,7 @@
             <td>
                   <p>
                     Designation 
-                  <%-- </p> <form:input path="designation" id="designation" /> --%> 
+                   </p> <form:input path="designation" id="designation" /> 
               </td>
           </tr>
           
@@ -70,7 +70,7 @@
             <td>
                   <p>
                     Address 
-                <%--   </p> <form:input path="address" id="address" /> --%> 
+                   </p> <form:input path="address" id="address" />  
               </td>
           </tr>
           
@@ -79,7 +79,7 @@
             <td>
                   <p>
                     Staff password 
-                 <%--  </p> <form:password path="staffpass" id="staffpass" />  --%>
+                 </p> <form:password path="staffpass" id="staffpass" /> 
               </td>
           </tr>
           
@@ -89,7 +89,7 @@
             <td>
                   <p>
                Re Enter Staff password 
-                 <%--  </p> <form:password path="restaffpass" id="restaffpass" />  --%>
+                   </p> <form:password path="restaffpass" id="restaffpass" /> 
               </td>
           </tr>
             
@@ -97,7 +97,7 @@
             <td colspan="2"><input type="submit" value="Submit" /></td>
           </tr>
         </table>
-   <%-- </form:form> --%> 
+   </form:form> 
       
 </body>
 </html>
