@@ -78,6 +78,14 @@
 		<put-attribute name="title" type="string" value="Test Page" />
 	</definition> 
 	
+		<!-- Mapping for Test3 Page -->
+	
+	 <definition name="Test3" id="Test3" extends="baseTemplate">
+		<put-attribute name="body" value="/WEB-INF/jsp/Test3.jsp" />
+		<put-attribute name="title" type="string" value="Test3 Page" />
+	</definition> 
+	
+	
 	
 	
 	<!-- Mapping for Welcome Admin Page -->
@@ -95,6 +103,14 @@
 		<put-attribute name="title" type="string" value="Welcome admin Page" />
 	</definition> 
 	
+	
+	
+			<!-- Mapping for  staff detail  Page -->
+	
+	 <definition name="Showstaffdetail" id="showstaffdetail" extends="baseTemplate">
+		<put-attribute name="body" value="/WEB-INF/jsp/Showstaffdetail.jsp" />
+		<put-attribute name="title" type="string" value="Staff detail admin Page" />
+	</definition> 
 	
 	
 	

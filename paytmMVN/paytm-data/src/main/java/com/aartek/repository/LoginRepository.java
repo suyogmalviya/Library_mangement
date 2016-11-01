@@ -17,13 +17,13 @@ public class LoginRepository {
 	public List<Object> loginDBCheck(UserLogin login) {
 
 		//List<Object> l=hibernateTemplate.find("from UserLogin where emailId="+login.getEmailId()+"and password="+login.getPassword()+"");
-		List<Object> l=hibernateTemplate.find("from UserLogin al where al.emailId=? and al.password=?",login.getEmailId(),login.getPassword());
+		List<Object> l=hibernateTemplate.find("from UserRegister al where al.emailId=? and al.password=?",login.getEmailId(),login.getPassword());
 
 		return l;
 
 	}	
 	
-
+/*
 	public boolean loginDBsave(UserLogin login) {
 
 		String email = login.getEmailId();
@@ -37,6 +37,6 @@ public class LoginRepository {
 
 		return false;
 
-	}
+	}*/
 
 }
