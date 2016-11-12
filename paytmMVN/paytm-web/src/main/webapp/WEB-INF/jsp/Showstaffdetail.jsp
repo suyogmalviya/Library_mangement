@@ -16,11 +16,18 @@
        <td>${l3.staffpass}</td>  
        <td>${l3.restaffpass}</td>  
        
-       <td><a href="editemp/${emp.id}">Edit</a></td>  
-       <td><a href="deleteemp/${emp.id}">Delete</a></td>  
+     <%--   <td><a href="editstaff/${l3.id}">Edit</a></td> --%>
+     
+      
+       <%-- <td><a href="deleteManager.do?id=${view.id}" --%>
+        <td><a href="deletestaff.do?employee_id=${l3.employee_id}" >Delete</a></td> 
+     
+    <%--  <a href="delete?id=${user.id}">Delete</a> --%>
+      <%-- <td><a href="<c:url value='/deleteCountry/${country.id}' />" >Delete</a></td> --%>
+      
        </tr>  
        </c:forEach>  
        </table>  
        <br/>  
-       <a href="empform">Add New Staff</a>  
+       <a href="deletestaff"> delete New Staff</a>  
 

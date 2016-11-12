@@ -35,4 +35,22 @@ public class CreateNewStaffRepo {
 		return l1;
 
 	}
+
+	public void deletestaffbyID(Integer employee_id) {
+		System.out.println("inside repo delete method");
+		System.out.println(employee_id);
+
+		hibernateTemplate.bulkUpdate("DELETE Createnewstaff where employee_id=?", employee_id);
+
+	}
+
+
+
+/*HibernateTemplate.delete takes the object you want to delete as an argument (you pass a query).
+
+Either change hibernateTemplate.delete("from User1 where USER_ID=:" +id1); to: hibernateTemplate.delete(hibernateTemplate.get(User1.class, id1));, or change it to:
+
+hibernateTemplate.bulkUpdate("DELETE User1 where id=?", id1);
+
+*/	
 }

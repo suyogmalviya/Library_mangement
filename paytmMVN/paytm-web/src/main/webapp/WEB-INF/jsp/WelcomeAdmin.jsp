@@ -10,8 +10,11 @@
 <h2>Welcome Administrator</h2>
 <br><a href="createnewstaff.do">Create new  Staff </a>
 <br><a href="showstaffdetail.do">Show Staff detail</a>
+<br><a href="deletestaffdetail.do">Delete Staff detail</a>
+<br><a href="editstaffdetail.do">Edit Staff detail</a>
 <br><a href="showbookdetail.do">Show Book detail</a>
 <br><a href="addbook.do">Add Book</a>
+
 
 
 </body>

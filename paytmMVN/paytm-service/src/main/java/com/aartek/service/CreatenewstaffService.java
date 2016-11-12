@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.aartek.model.Createnewstaff;
 import com.aartek.model.UserLogin;
@@ -34,18 +35,17 @@ public class CreatenewstaffService {
 
 		List<Object> staffdetailstatus = createNewStaffRepo.Showstaffdetail(staffdetail);
 
-		System.out.println("total no of record"+staffdetailstatus.size());
-		
-		Iterator it=  staffdetailstatus.iterator();
-		
-		while(it.hasNext()){
-			
-		
-		Object o=(Object)it.next();
-		Createnewstaff cp= (Createnewstaff)o;
-		System.out.println("staff name"+cp.getStaffname());
+		System.out.println("total no of record" + staffdetailstatus.size());
+
+		Iterator it = staffdetailstatus.iterator();
+
+		while (it.hasNext()) {
+
+			Object o = (Object) it.next();
+			Createnewstaff cp = (Createnewstaff) o;
+			System.out.println("staff name" + cp.getStaffname());
 		}
-		
+
 		System.out.println(staffdetailstatus);
 		if (staffdetailstatus.size() == 0) {
 			return false;
@@ -56,22 +56,27 @@ public class CreatenewstaffService {
 
 	}
 
-	public List<Object>listofstaff(Createnewstaff showlist){
-		
-	List<Object> l2= createNewStaffRepo.Showstaffdetail(showlist);
-		
-		return l2 ;
-	}
-	
-	/*public List<Person> listPersons() {
-		Session session = this.sessionFactory.getCurrentSession();
-		List<Person> personsList = session.createQuery("from Person").list();
-		for(Person p : personsList){
-			logger.info("Person List::"+p);
-		}
-		return personsList;
-	}*/
-	
+	public List<Object> listofstaff(Createnewstaff showlist) {
 
+		List<Object> l2 = createNewStaffRepo.Showstaffdetail(showlist);
+
+		return l2;
+	}
+
+	/*
+	 * public List<Person> listPersons() { Session session =
+	 * this.sessionFactory.getCurrentSession(); List<Person> personsList =
+	 * session.createQuery("from Person").list(); for(Person p : personsList){
+	 * logger.info("Person List::"+p); } return personsList; }
+	 */
+
+	@Transactional
+	public void deletestaffservice(Integer id) {
+
+		System.out.println("inside delete service method");
+		
+		this.createNewStaffRepo.deletestaffbyID(id);
+		
+	}
 
 }
