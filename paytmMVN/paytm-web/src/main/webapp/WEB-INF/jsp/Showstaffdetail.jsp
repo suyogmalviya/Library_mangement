@@ -16,9 +16,9 @@
        <td>${l3.staffpass}</td>  
        <td>${l3.restaffpass}</td>  
        
-     <%--   <td><a href="editstaff/${l3.id}">Edit</a></td> --%>
-     
-      
+       <td><a href="editstaff.do?employee_id=${l3.employee_id}">Edit</a></td>
+
+     <%--  <td><a href="edit?id=${user.id}">Edit</a></td> --%>
        <%-- <td><a href="deleteManager.do?id=${view.id}" --%>
         <td><a href="deletestaff.do?employee_id=${l3.employee_id}" >Delete</a></td> 
      

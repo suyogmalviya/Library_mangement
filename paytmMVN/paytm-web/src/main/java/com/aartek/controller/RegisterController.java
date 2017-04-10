@@ -23,6 +23,15 @@ public class RegisterController {
 	@Autowired
 	private RegisterValidator registerValid;
 	
+	
+	
+	@RequestMapping(value = "/Registration_New", method = RequestMethod.GET)
+	  public String Registration_New() {
+	    return "Registration_New";
+	  }
+	
+	
+	
 	@RequestMapping(value="/myregister",method=RequestMethod.GET)
 	public String showRegister(Map<String, Object> map){
 		

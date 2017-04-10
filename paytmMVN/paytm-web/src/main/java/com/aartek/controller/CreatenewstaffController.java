@@ -1,13 +1,16 @@
 package com.aartek.controller;
 
+import java.util.Base64;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.dom4j.rule.Mode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -27,7 +30,8 @@ public class CreatenewstaffController {
 
 	@Autowired
 	private CreatenewstaffService createnewstaffService;
-//************************************************************************************
+
+	// ************************************************************************************
 	@RequestMapping(value = "/createnewstaff", method = { RequestMethod.GET, RequestMethod.POST })
 	public String createnewstaff(Map<String, Object> map) {
 
@@ -37,7 +41,8 @@ public class CreatenewstaffController {
 		return "createnewstaff";
 
 	}
-//****************************************************************************
+
+	// ****************************************************************************
 	@RequestMapping(value = "/saveNewStaff", method = { RequestMethod.GET, RequestMethod.POST })
 	public String savenewstaff(@ModelAttribute("Createnewstaff") Createnewstaff createnewstaff, BindingResult result,
 			ModelMap model) {
@@ -53,7 +58,7 @@ public class CreatenewstaffController {
 		}
 	}
 
-	//********************************************************************
+	// ********************************************************************
 	@RequestMapping(value = "/showstaffdetail", method = { RequestMethod.GET, RequestMethod.POST })
 	public String Showstaffdetail(@ModelAttribute("Createnewstaff") Createnewstaff showstaff, ModelMap model) {
 
@@ -90,44 +95,71 @@ public class CreatenewstaffController {
 		}
 	}
 
-	
-	//**********************************************************************
+	// **********************************************************************
 	/*
-	@RequestMapping(value="/deletestaff",method = { RequestMethod.GET, RequestMethod.POST },headers = "Accept=application/json")
-	public String deleteStaff(@PathVariable("employee_id") String employee_id){
-	
-		System.out.println("delete process accepted form jsp page ");
-		this.createnewstaffService.deletestaffservice(employee_id);
-		
-	return "Showstaffdetail" ;
-	}*/
-	
-	//@RequestMapping(value = "/deletestaff/${l3.employee_id}", method = RequestMethod.GET, headers = "Accept=application/json")
-	
-	
-	
-/*	@RequestMapping(value = "/deletestaff", method = RequestMethod.GET)
-	public ModelAndView deleteUser(HttpServletRequest request) {
-		System.out.println("delete method execute");
-		System.out.println(request.getParameter("employee_id"));
-		int userId = Integer.parseInt(request.getParameter("id"));
-		//userDao.delete(userId);
-		return new ModelAndView("redirect:/");		
-	}
-	*/
-	
-	
-	
+	 * @RequestMapping(value="/deletestaff",method = { RequestMethod.GET,
+	 * RequestMethod.POST },headers = "Accept=application/json") public String
+	 * deleteStaff(@PathVariable("employee_id") String employee_id){
+	 * 
+	 * System.out.println("delete process accepted form jsp page ");
+	 * this.createnewstaffService.deletestaffservice(employee_id);
+	 * 
+	 * return "Showstaffdetail" ; }
+	 */
+
+	// @RequestMapping(value = "/deletestaff/${l3.employee_id}", method =
+	// RequestMethod.GET, headers = "Accept=application/json")
+
+	/*
+	 * @RequestMapping(value = "/deletestaff", method = RequestMethod.GET)
+	 * public ModelAndView deleteUser(HttpServletRequest request) {
+	 * System.out.println("delete method execute");
+	 * System.out.println(request.getParameter("employee_id")); int userId =
+	 * Integer.parseInt(request.getParameter("id")); //userDao.delete(userId);
+	 * return new ModelAndView("redirect:/"); }
+	 */
+
 	@RequestMapping(value = "/deletestaff")
 	public String deleteManager(ModelMap model, @RequestParam(required = false) Integer employee_id,
-					@ModelAttribute Createnewstaff createnewstaff) {
-	System.out.println("inside new delete method");
-	System.out.println(employee_id);	
-	//managerService.deleteManager(id);
-	createnewstaffService.deletestaffservice(employee_id);
+			@ModelAttribute Createnewstaff createnewstaff) {
+		System.out.println("inside new delete method");
+		System.out.println(employee_id);
+		// managerService.deleteManager(id);
+		createnewstaffService.deletestaffservice(employee_id);
 		return "redirect:/showstaffdetail.do";
 	}
+
+	/*
+	 * @RequestMapping("edit") public ModelAndView editUser(@RequestParam int
+	 * id,@ModelAttribute Employee employee) { Employee employeeObject =
+	 * dataService.getRowById(id); return new
+	 * ModelAndView("edit","employeeObject",employeeObject); }
+	 */
+//****************************** edit************************
+	@RequestMapping("editstaff.do")
+	public ModelAndView editstaffcon(@RequestParam int employee_id, @ModelAttribute Createnewstaff createnewstaff) {
+		System.out.println("inside edit controller method");
+		Createnewstaff editobject = createnewstaffService.getRowById1(employee_id);
+		System.out.println("2"+editobject.getEmployee_id());
+		return new ModelAndView("editstaff", "editobject", editobject);
+
+	}
 	
+	///************** update **********************
+	
+/*	@RequestMapping("update")
+	public ModelAndView updateUser(@ModelAttribute Employee employee) {
+		dataService.updateRow(employee);
+		return new ModelAndView("redirect:list");
+	}*/
+	
+	
+	@RequestMapping("update.do")
+public ModelAndView updatestaff(@ModelAttribute Createnewstaff createnewstaff){
+	
+	createnewstaffService.updatestaffser(createnewstaff);
+	return new ModelAndView("redirect:/showstaffdetail.do");
+}
 	
 	
 }

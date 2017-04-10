@@ -18,6 +18,18 @@
 		/> <put-attribute name="body" value="${body}" /> <put-attribute name="footer" 
 		value="/WEB-INF/layout/footer.jsp" /> </definition> -->
 
+<!-- Mapping for index Page -->
+<definition name="index" id="index" extends="baseTemplate">
+		<put-attribute name="body" value="/WEB-INF/jsp/index.jsp" />
+		<put-attribute name="title" type="string" value="index Page" />
+	</definition>
+
+<!-- Mapping for index1 Page -->
+<definition name="index1" id="index1" extends="baseTemplate">
+		<put-attribute name="body" value="/WEB-INF/jsp/index1.jsp" />
+		<put-attribute name="title" type="string" value="index1 Page" />
+	</definition>
+
 	<!-- Mapping for login Page -->
 
 	<definition name="login" id="login" extends="baseTemplate">
@@ -44,6 +56,14 @@
 
 	<definition name="register" id="register" extends="baseTemplate">
 		<put-attribute name="body" value="/WEB-INF/jsp/register.jsp" />
+		<put-attribute name="title" type="string" value="register Page" />
+	</definition>
+
+
+	<!-- Mapping for Registration_New Page -->
+
+	<definition name="Registration_New" id="Registration_New" extends="baseTemplate">
+		<put-attribute name="body" value="/WEB-INF/jsp/Registration_New.jsp" />
 		<put-attribute name="title" type="string" value="register Page" />
 	</definition>
 	
@@ -110,6 +130,15 @@
 	 <definition name="Showstaffdetail" id="showstaffdetail" extends="baseTemplate">
 		<put-attribute name="body" value="/WEB-INF/jsp/Showstaffdetail.jsp" />
 		<put-attribute name="title" type="string" value="Staff detail admin Page" />
+	</definition> 
+	
+	
+	
+		<!-- Mapping for  editstaff detail  Page -->
+	
+	 <definition name="editstaff" id="editstaff" extends="baseTemplate">
+		<put-attribute name="body" value="/WEB-INF/jsp/editstaff.jsp" />
+		<put-attribute name="title" type="string" value=" edit Staff detail  Page" />
 	</definition> 
 	
 	

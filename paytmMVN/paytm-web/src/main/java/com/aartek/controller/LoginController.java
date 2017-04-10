@@ -18,6 +18,14 @@ public class LoginController {
 
 	@Autowired
 	private LoginService loginService;
+	
+	
+	
+	
+	@RequestMapping(value = "/index1", method = RequestMethod.GET)
+	  public String index() {
+	    return "index1";
+	  }
 
 	@RequestMapping(value = "/mylogin", method = RequestMethod.GET)
 	public String showLogin(Map<String, Object> map) {

@@ -70,13 +70,68 @@ public class CreatenewstaffService {
 	 * logger.info("Person List::"+p); } return personsList; }
 	 */
 
+	/*@Transactional
+	public Country getCountry(int id) {
+		return countryDao.getCountry(id);
+	}*/
+
+
+	
 	@Transactional
 	public void deletestaffservice(Integer id) {
 
 		System.out.println("inside delete service method");
-		
+
 		this.createNewStaffRepo.deletestaffbyID(id);
+
+	}
+
+/*	
+	@Transactional
+	public List<Createnewstaff> getallemplyeeser() {
+		
+		return createNewStaffRepo.getallemployee();
 		
 	}
+	
+	public Createnewstaff getEmployee_id(int id){
+		return createNewStaffRepo.getEmployee_id(id);
+	}
+	
+	//************** edit service*********
+	
+	
+	@Transactional
+	public void editstaffser(Createnewstaff createnewstaff) {
+		// countryDao.updateCountry(country);
+
+		createNewStaffRepo.updatestaff(createnewstaff);
+
+	}*/
+	public Createnewstaff getRowById1(int id){
+		
+		System.out.println("inside edit service method");
+		return createNewStaffRepo.getRowById(id);
+	}
+	
+	
+	
+	//**********************update service*************************
+	/*@Override
+	public int updateRow(Employee employee) {
+		return dataDao.updateRow(employee);
+	}*/
+	
+	
+	public int updatestaffser(Createnewstaff createnewstaff){
+	
+		return createNewStaffRepo.updatestaffrow(createnewstaff);
+	}
+	
+	
+	
+	
+	
+	
 
 }
